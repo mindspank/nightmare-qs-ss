@@ -25,6 +25,7 @@ var page = Nightmare({
     })
     .wait(3000)
     .screenshot('chart.png') // Take a screenshot of the page.
+    .pdf('chart.pdf') // Output a pdf
     .run(function() { console.log('Done!'); process.exit(1); })
     .catch(function(err) {
         console.log(err);
